@@ -52,14 +52,18 @@ VPS provider: Vultr
   * Login as grader: `ssh -i udacity_grader.rsa grader@140.82.47.41 -p 2200`
 ### 6. Disable password login  
   * Edit sshd_config:
+
     `sudo vi /etc/ssh/sshd_config`
   * On the line PasswordAuthentication, change it to "no"
+
     `PasswordAuthentication no`
   * Restart sshd:
+
     `service sshd restart`
 ### 7. Update All system packages
   * list of available packages and their versions：
+
     `sudo apt-get update`
   * Upgrade all pakages to most recent versions:
+
     `sudo apt-get upgrade`
-    
