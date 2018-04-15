@@ -44,5 +44,22 @@ VPS provider: Vultr
   * `ufw allow 80`
   * `ufw allow 123`
   * `ufw enable`
-
-  
+### 5. Generate SSH key and login by using SSH key
+  * On the local computer, change a directory for ssh key: `mkdir ssh_key`
+  * Generate SSH key on local side: `ssh-keygen -t rsa -f udacity_grader.rsa -C "grader_key" `
+  * Lookup the public key: `cat udacity_grader.rsa.pub`
+  * Paste the public key on the server side: `vi .ssh/authorized_keys`
+  * Login as grader: `ssh -i udacity_grader.rsa grader@140.82.47.41 -p 2200`
+### 6. Disable password login  
+  * Edit sshd_config:
+    `sudo vi /etc/ssh/sshd_config`
+  * On the line PasswordAuthentication, change it to "no"
+    `PasswordAuthentication no`
+  * Restart sshd:
+    `service sshd restart`
+### 7. Update All system packages
+  * list of available packages and their versions：
+    `sudo apt-get update`
+  * Upgrade all pakages to most recent versions:
+    `sudo apt-get upgrade`
+    
