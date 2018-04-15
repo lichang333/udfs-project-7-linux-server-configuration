@@ -48,7 +48,7 @@ VPS provider: Vultr
   * On the local computer, change a directory for ssh key: `mkdir ssh_key`
   * Generate SSH key on local side: `ssh-keygen -t rsa -f udacity_grader.rsa -C "grader_key" `
   * Lookup the public key: `cat udacity_grader.rsa.pub`
-  * Paste the public key on the server side: `vi .ssh/authorized_keys`
+  * Paste the public key on the server side: `vi /home/grader/.ssh/authorized_keys`
   * Login as grader: `ssh -i udacity_grader.rsa grader@140.82.47.41 -p 2200`
 ### 6. Disable password login  
   * Edit sshd_config:
@@ -67,6 +67,26 @@ VPS provider: Vultr
   * Upgrade all pakages to most recent versions:
 
     `sudo apt-get upgrade`
+### 8. Local time setup
+  * Lookup time zone at first:
 
+    `date -R`
+  * Use following command to choose your local timezone:
 
-    
+    `sudo dpkg-reconfigure tzdata`
+
+### 9. Install web application dependencies
+    * Install pip:
+
+      `sudo apt-get install python-pip`
+    * Install Flask:  
+
+      `pip install Flask`
+    * Install sqlalchemy:
+
+    `pip install sqlalchemy`
+    * Install requests:
+
+    `pip install requests`
+    * Install oauth2client:
+    `pip install oauth2client`
