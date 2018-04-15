@@ -7,7 +7,9 @@ In this project, the student will take a baseline of Linux server installation t
 ## Server Login information
 
 IP address: 140.82.47.41
+
 SSH port: 2200
+
 VPS provider: Vultr
 
 ## Setup Log
