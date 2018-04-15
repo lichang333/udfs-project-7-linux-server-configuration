@@ -58,9 +58,15 @@ VPS provider: Vultr
 
     `PasswordAuthentication no`
   * Restart sshd:
+
     `service sshd restart`
 ### 7. Update All system packages
   * list of available packages and their versions：
+
     `sudo apt-get update`
   * Upgrade all pakages to most recent versions:
+
     `sudo apt-get upgrade`
+
+
+    
