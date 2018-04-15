@@ -1,4 +1,4 @@
-# Project-7-linux-server-configuration
+# Project 7: Linux Server Configuration
 
 ## Description
 
@@ -12,4 +12,4 @@ SSH port: 2200
 
 VPS provider: Vultr
 
-## Setup Log
+## Deploy Log
