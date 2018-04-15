@@ -13,3 +13,8 @@ SSH port: 2200
 VPS provider: Vultr
 
 ## Deploy Log
+
+### 1. Add user "grader" and grant sudo permissions
+  * Login the VPS via terminal by using password : ```$ ssh root@140.82.47.41 ```
+  * Create a user named "grader": ```root@vultr:~# adduser grader```
+  * 
