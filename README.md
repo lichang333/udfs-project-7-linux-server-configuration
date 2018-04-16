@@ -122,7 +122,7 @@ VPS provider: Vultr
   * Install sendmail to notice: `sudo apt-get install sendmail`
   * Create jail.local for safe configure:`sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local`
   * Edit jail.local `sudo vi /etc/fail2ban/jail.local`, search for the "destemail" for destination email address
-  
+  * To start/stop fail2ban: `sudo service fail2ban stop` or `sudo service fail2ban start`
 
 
 
@@ -130,6 +130,16 @@ VPS provider: Vultr
 
 
 ### 11. Install web application dependencies
+  * Install Apache:
+
+    `sudo apt-get install apache2`
+  * Install mod_wsgi:
+
+    `sudo apt-get install libapache2-mod-wsgi python-dev`
+  * Enable mod_wsgi: `sudo a2enmod wsgi`
+
+  * Start Apache: `sudo service apache2 start`
+  
   * Install pip:
 
       `sudo apt-get install python-pip`
