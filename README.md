@@ -108,8 +108,7 @@ VPS provider: Vultr
 
     ```
 
-
-### 8. Local time setup
+### 9. Local time setup
   * Lookup time zone at first:
 
     `date -R`
@@ -117,18 +116,31 @@ VPS provider: Vultr
 
     `sudo dpkg-reconfigure tzdata`
 
-### 9. Install web application dependencies
-    * Install pip:
+### 10. Instll fail2ban to prevent Brute-force attack
+
+  * Type following command to install fail2ban: `sudo apt-get install fail2ban`
+  * Install sendmail to notice: `sudo apt-get install sendmail`
+  * Create jail.local for safe configure:`sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local`
+  * Edit jail.local `sudo vi /etc/fail2ban/jail.local`, search for the "destemail" for destination email address
+  
+
+
+
+
+
+
+### 11. Install web application dependencies
+  * Install pip:
 
       `sudo apt-get install python-pip`
-    * Install Flask:  
+  * Install Flask:  
 
       `pip install Flask`
-    * Install sqlalchemy:
+  * Install sqlalchemy:
 
     `pip install sqlalchemy`
-    * Install requests:
+  * Install requests:
 
     `pip install requests`
-    * Install oauth2client:
+  * Install oauth2client:
     `pip install oauth2client`
