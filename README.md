@@ -67,6 +67,32 @@ VPS provider: Vultr
   * Upgrade all pakages to most recent versions:
 
     `sudo apt-get upgrade`
+
+### 8. Install unattended-upgrades to keep pakages up-to-date:
+  * Install unattended-upgrades:
+    `sudo apt install unattended-upgrades apt-listchanges`
+  * Edit /etc/apt/apt.conf.d/50unattended-upgrades:
+    `vi /etc/apt/apt.conf.d/50unattended-upgrades`
+  * Add this line at the end to give root notice:
+    ```
+    Unattended-Upgrade::Origins-Pattern {
+    Unattended-Upgrade::Mail "root";
+    };    
+    ```
+  * Execute with guide program: `sudo dpkg-reconfigure -plow unattended-upgrades`
+
+  * Make sure /etc/apt/apt.conf.d/20auto-upgrades have following stuffs:
+    ```
+      APT::Periodic::Update-Package-Lists "1";
+      APT::Periodic::Unattended-Upgrade "1";
+    ```
+  * You can also add: `APT::Periodic::Verbose "2";` to the /etc/apt/apt.conf.d/20auto-upgrades
+
+  * check /etc/apt/listchanges.conf, make sure "email_address = root":
+    ```
+    cat /etc/apt/listchanges.conf
+    ```
+
 ### 8. Local time setup
   * Lookup time zone at first:
 
