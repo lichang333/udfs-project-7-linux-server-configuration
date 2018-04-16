@@ -124,11 +124,6 @@ VPS provider: Vultr
   * Edit jail.local `sudo vi /etc/fail2ban/jail.local`, search for the "destemail" for destination email address
   * To start/stop fail2ban: `sudo service fail2ban stop` or `sudo service fail2ban start`
 
-
-
-
-
-
 ### 11. Install web application dependencies
   * Install Apache:
 
@@ -139,7 +134,7 @@ VPS provider: Vultr
   * Enable mod_wsgi: `sudo a2enmod wsgi`
 
   * Start Apache: `sudo service apache2 start`
-  
+
   * Install pip:
 
       `sudo apt-get install python-pip`
