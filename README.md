@@ -124,7 +124,7 @@ VPS provider: Vultr
   * Edit jail.local `sudo vi /etc/fail2ban/jail.local`, search for the "destemail" for destination email address
   * To start/stop fail2ban: `sudo service fail2ban stop` or `sudo service fail2ban start`
 
-### 11. Install web application dependencies
+### 11. Install web dependencies (Apache and mod_wsgi)
   * Install Apache:
 
     `sudo apt-get install apache2`
@@ -135,17 +135,50 @@ VPS provider: Vultr
 
   * Start Apache: `sudo service apache2 start`
 
-  * Install pip:
+### 12. Install other web dependencies
+  * Install pip: `sudo apt-get install python-pip`
+  * Install Flask: `pip install Flask`
+  * Install sqlalchemy: `pip install sqlalchemy`
+  * Install requests: `pip install requests`
+  * Install oauth2client: `pip install oauth2client`
+  * ...and other dependencies: `pip install bleach httplib2 python-psycopg2`
 
-      `sudo apt-get install python-pip`
-  * Install Flask:  
+### 13. Install virtual environment
+  * Install virtualenv: `sudo pip install virtualenv`
+  * Create catalog folder: `mkdir /var/www/catalog`
+  * Create a virtual environment: `sudo virtualenv venv`
+  * Activate the virutal environment `source venv/bin/activate`
+  * Change permissions `sudo chmod -R 777 venv`
 
-      `pip install Flask`
-  * Install sqlalchemy:
+### 14. Configure the new virtual host
+  * Create a virtual host config file: `vi /etc/apache2/sites-available/catalog.conf`
+  * Use following code:
+  ```
+<VirtualHost *:80>
+    ServerName 140.82.47.41
+    ServerAlias vultr
+    ServerAdmin admin@140.82.47.41
+    WSGIDaemonProcess catalog python-path=/var/www/catalog:/var/www/catalog/venv/lib/python2.7/site-packages
+    WSGIProcessGroup catalog
+    WSGIScriptAlias / /var/www/catalog/catalog.wsgi
+    <Directory /var/www/catalog/catalog/>
+        Order allow,deny
+        Allow from all
+    </Directory>
+    Alias /static /var/www/catalog/catalog/static
+    <Directory /var/www/catalog/catalog/static/>
+        Order allow,deny
+        Allow from all
+    </Directory>
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    LogLevel warn
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+```
+  * Enable the virtual host: `sudo a2ensite catalog`
+  * Reload Apache: `systemctl reload apache2`
 
-    `pip install sqlalchemy`
-  * Install requests:
 
-    `pip install requests`
-  * Install oauth2client:
-    `pip install oauth2client`
+
+
+  
