@@ -178,7 +178,28 @@ VPS provider: Vultr
   * Enable the virtual host: `sudo a2ensite catalog`
   * Reload Apache: `systemctl reload apache2`
 
+### 15 - Deploy PostgreSQL
+  * Install libpq-dev and python-dev: ` sudo apt-get install libpq-dev python-dev`
+  * Install PostgreSQL: `sudo apt-get install postgresql postgresql-contrib`
+  * Switch to user "postgres": `sudo su - postgres`
+  * Login PostgreSQL: `psql`
+  * Set password for "postgres" : `\password postgres`
+  * Create "catalog" for database user and set password:
+    `CREATE USER catalog WITH PASSWORD 'password';`
+  * Create a database named "catalog" which own by catalog:
+    `CREATE DATABASE catalog OWNER catalog;`
 
+  * Give database "catalog" all permissions to catalog:
+    `GRANT ALL PRIVILEGES ON DATABASE catalog to catalog;`
 
-
-  
+  * Exit: `\q`  
+  * Exit postgres: `exit`
+  * Edit "database_setup.py" and Flask application to :
+    ```
+    engine = create_engine('postgresql://catalog:database_password@localhost/catalog')
+    ```
+  * Set up Database:
+    ```
+    python /var/www/catalog/catalog/database_setup.py
+    ```
+  * Reload Apache: `sudo service apache2 restart`
