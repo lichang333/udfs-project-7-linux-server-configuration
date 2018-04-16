@@ -203,3 +203,6 @@ VPS provider: Vultr
     python /var/www/catalog/catalog/database_setup.py
     ```
   * Reload Apache: `sudo service apache2 restart`
+
+  * The web application now should be ready:
+    > http://140.82.47.41
