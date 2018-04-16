@@ -93,6 +93,22 @@ VPS provider: Vultr
     cat /etc/apt/listchanges.conf
     ```
 
+    The return will be like this:
+
+    ```
+    [apt]
+    frontend=pager
+    which=news
+    email_address=root
+    email_format=text
+    confirm=false
+    headers=false
+    reverse=false
+    save_seen=/var/lib/apt/listchanges.db
+
+    ```
+
+
 ### 8. Local time setup
   * Lookup time zone at first:
 
