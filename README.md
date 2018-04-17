@@ -156,7 +156,7 @@ VPS provider: Vultr
   ```
 <VirtualHost *:80>
     ServerName 140.82.47.41
-    ServerAlias vultr
+    ServerAlias vultr.ellerystars.com
     ServerAdmin admin@140.82.47.41
     WSGIDaemonProcess catalog python-path=/var/www/catalog:/var/www/catalog/venv/lib/python2.7/site-packages
     WSGIProcessGroup catalog
@@ -206,6 +206,8 @@ VPS provider: Vultr
 
   * The web application now should be ready:
     > http://140.82.47.41
+    or
+    > http://vultr.ellerystars.com
 
 ### References
   "Changing Default SSH Port in OpenSSH. Https://Www.knownhost.com,  www.knownhost.com/wiki/security/misc/how-can-i-change-my-ssh-port.
