@@ -206,3 +206,12 @@ VPS provider: Vultr
 
   * The web application now should be ready:
     > http://140.82.47.41
+
+### References
+  “Changing Default SSH Port in OpenSSH.” Https://Www.knownhost.com, > www.knownhost.com/wiki/security/misc/how-can-i-change-my-ssh-port.
+
+  DigitalOcean. Initial Server Setup with Ubuntu 12.04 | DigitalOcean, DigitalOcean, 1 June 2017, > www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-12-04.
+
+  “How to change time and time zone on Ubuntu.” Ubuntu修改时区和时间的方法 - CSDN博客, > blog.csdn.net/YEYUANGEN/article/details/52103445.
+
+  DigitalOcean. How To Secure PostgreSQL on an Ubuntu VPS | DigitalOcean, DigitalOcean, 13 Oct. 2016, > www.digitalocean.com/community/tutorials/how-to-secure-postgresql-on-an-ubuntu-vps.
