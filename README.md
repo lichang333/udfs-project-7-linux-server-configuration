@@ -216,4 +216,20 @@ VPS provider: Vultr
 
   DigitalOcean. How To Secure PostgreSQL on an Ubuntu VPS | DigitalOcean, DigitalOcean, 13 Oct. 2016,  www.digitalocean.com/community/tutorials/how-to-secure-postgresql-on-an-ubuntu-vps.
 
-  
+  “Ubuntu Documentation.” PostgreSQL - Community Help Wiki, help.ubuntu.com/community/PostgreSQL.
+
+  DigitalOcean. How To Install and Use PostgreSQL on Ubuntu 14.04 | DigitalOcean, DigitalOcean, 13 Oct. 2016, www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-14-04.
+
+  DigitalOcean. How To Deploy a Flask Application on an Ubuntu VPS | DigitalOcean, DigitalOcean, 13 Oct. 2016, www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps.
+
+  DigitalOcean. How To Protect SSH with Fail2Ban on Ubuntu 14.04 | DigitalOcean, DigitalOcean, 30 Nov. 2017, www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-ubuntu-14-04.
+
+  Pan, Steven, et al. “Getting started withPostgreSQL.” PostgreSQL新手入门 - 阮一峰的网络日志, www.ruanyifeng.com/blog/2013/12/getting_started_with_postgresql.html.
+
+  DigitalOcean. How to Run Django with mod_wsgi and Apache with a Virtualenv Python Environment on a Debian VPS | DigitalOcean, DigitalOcean, 13 Oct. 2016, www.digitalocean.com/community/tutorials/how-to-run-django-with-mod_wsgi-and-apache-with-a-virtualenv-python-environment-on-a-debian-vps.
+
+  “SSH修改登录端口禁止密码登录并免密登录.” 简书, www.jianshu.com/p/b294e9da09ad.
+
+  “How Do I Disable SSH Login for the Root User?” How Do I Disable SSH Login for the Root User? - Media Temple, mediatemple.net/community/products/dv/204643810/how-do-i-disable-ssh-login-for-the-root-user.
+
+  “Ubuntu Documentation.” UFW - Community Help Wiki, help.ubuntu.com/community/UFW.
